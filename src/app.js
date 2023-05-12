@@ -1,6 +1,7 @@
 import "./css/App.css";
 import { NavBar } from "./components/navBar.js";
 import { PageManager } from "./components/pageManager.js";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -8,9 +9,9 @@ function App() {
       <header className="App-header">
         <NavBar></NavBar>
       </header>
-      <section>
+      <main>
         <PageManager></PageManager>
-      </section>
+      </main>
       <footer></footer>
     </>
   );
