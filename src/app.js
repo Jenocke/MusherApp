@@ -8,9 +8,9 @@ function App() {
       <header className="App-header">
         <NavBar></NavBar>
       </header>
-      <body>
+      <section>
         <PageManager></PageManager>
-      </body>
+      </section>
       <footer></footer>
     </>
   );
