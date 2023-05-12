@@ -1,0 +1,3 @@
+const ArrivalList = () => {};
+
+export { ArrivalList };

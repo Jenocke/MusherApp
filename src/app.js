@@ -1,13 +1,18 @@
 import "./css/App.css";
 import { NavBar } from "./components/navBar.js";
+import { PageManager } from "./components/pageManager.js";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <header className="App-header">
         <NavBar></NavBar>
       </header>
-    </div>
+      <body>
+        <PageManager></PageManager>
+      </body>
+      <footer></footer>
+    </>
   );
 }
 

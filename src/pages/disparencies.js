@@ -1,0 +1,2 @@
+const DisparenciesDetector = () => {};
+export { DisparenciesDetector };
