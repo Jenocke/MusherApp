@@ -5,7 +5,14 @@ import { DisparenciesDetector } from "../pages/disparencies";
 import { Routes, Route } from "react-router-dom";
 
 const PageManager = () => {
-  return <MusherList></MusherList>;
+  return (
+    <Routes>
+      <Route path="/mushers" element={<MusherList />} />
+      <Route path="/arrivalsLeg1" element={<ArrivalList />} />
+      <Route path="/arrivalsLeg2" element={<ArrivalList />} />
+      <Route path="/disparencies" element={<DisparenciesDetector />} />
+    </Routes>
+  );
 };
 
 export { PageManager };

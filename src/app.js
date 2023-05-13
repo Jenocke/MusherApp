@@ -1,7 +1,6 @@
 import "./css/App.css";
 import { NavBar } from "./components/navBar.js";
 import { PageManager } from "./components/pageManager.js";
-import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -10,7 +9,7 @@ function App() {
         <NavBar></NavBar>
       </header>
       <main>
-        <PageManager></PageManager>
+        <PageManager />
       </main>
       <footer></footer>
     </>
