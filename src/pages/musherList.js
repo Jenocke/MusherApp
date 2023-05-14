@@ -1,10 +1,17 @@
+import "../css/musherList.css";
+
 const MusherList = () => {
   return (
-    <div className="mushersList">
+    <div className="musherListPage">
       <div className="musherTable">
-        <p>Currently registered mushers</p>
+        <label>Currently registered mushers</label>
         <table></table>
       </div>
+      <aside className="buttons">
+        <button>Add a new musher</button>
+        <button>Edit selected musher</button>
+        <button>delete selected musher</button>
+      </aside>
     </div>
   );
 };

@@ -9,7 +9,7 @@ body {
 }
 .App-header {
   background-color: darkgrey;
-  height: 6%;
+  height: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,7 +19,7 @@ body {
 }
 nav {
   width: 95%;
-  height: 5%;
+  height: 4%;
   border: solid 1px white;
   position: absolute;
   top: 2px;
