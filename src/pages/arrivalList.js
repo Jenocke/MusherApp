@@ -1,6 +1,8 @@
+import "../css/arrivals.css";
+
 const ArrivalList = (props) => {
   return (
-    <div>
+    <div className="arrivalList">
       <p>Arrival list Leg {props.leg}</p>
       <table></table>
     </div>

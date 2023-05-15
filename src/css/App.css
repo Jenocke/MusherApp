@@ -36,7 +36,16 @@ ul.NavBar {
   gap: 15%;
   font-size: large;
 }
-.NavBar li {
+.NavBar a {
+  border: solid 1px white;
+  border-radius: 90px;
+  padding: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.NavBar a .active {
+  background-color: aqua;
 }
 
 section {

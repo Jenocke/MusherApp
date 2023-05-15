@@ -1,0 +1,24 @@
+.arrivalListPage {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+}
+
+.arrivalList {
+  height: 50%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+
+.arrivalList table {
+  height: 90%;
+  width: 80%;
+  border: 1px solid black;
+}
