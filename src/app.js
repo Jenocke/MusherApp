@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <header className="App-header">
-        <NavBar></NavBar>
+        <NavBar />
       </header>
       <main>
         <PageManager />
