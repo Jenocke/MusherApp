@@ -61,7 +61,7 @@ const ArrivalListPage = (props) => {
         <ArrivalList leg={props.leg} data={filteredData} />
       )}
       <div className="buttonArea">
-        <button onclick={handleImport}>Import arrival List</button>
+        <input type="file" accept=".txt" />
       </div>
     </div>
   );
