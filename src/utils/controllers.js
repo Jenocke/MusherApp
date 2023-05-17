@@ -17,18 +17,19 @@ const processTextFile = (fileContent) => {
 
   //main loop. Loop through the whole file. We exit when we reach the "End" part or when we reach the end of the file
   let i = 0;
+  const musherList = [];
   while (i < linesArray.length && !linesArray[i].startsWith("End")) {
-    //can only be a new musher
     const lineSegments = linesArray[i].split(" ");
-    //checking that it's a watch, just to be sure
+    //checking that it's a watch
     const isAWatch = lineSegments[0].startsWith("056");
     if (isAWatch) {
       const watchId = lineSegments[0].slice(lineSegments[0].length - 3);
       //checking if it's a staff's watch, to be sure
       const isStaffWatch = staffWatchIds.includes(watchId);
       if (!isStaffWatch) {
+        const musher = {};
         //this is a watch ID, and it's a musher's watch => we can start creating the object
-        const musher = { musherNumber: watchId };
+        musher.musherNumber = watchId;
         if (lineSegments[1].startsWith(leg1Day)) {
           musher.arrivalDay = 1;
         } else if (lineSegments[1].startsWith(leg2Day)) {
@@ -36,10 +37,17 @@ const processTextFile = (fileContent) => {
         }
         musher.scanningTime =
           lineSegments[2].slice(0, 2) + ":" + lineSegments[2].slice(2, 4);
+
+        musher.dogsIDs = [];
+        musherList.push(musher);
+
         //subloop. that loop goes through an arrival until the staff's watch is scanned
-        console.log(musher);
+      } else {
+        //if it's a staff's watch, we need to add the musher object to the list, and reset it
+        console.log(musherList);
       }
     }
+
     i++;
   }
 };
