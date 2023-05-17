@@ -1,5 +1,28 @@
 {
-  "RaceInfo": {},
-  "mushers": [],
-  "arrivals": []
+  "arrivalsTemplate": {
+    "musherNumber": "00015",
+    "arrivalDay": 1,
+    "scanningTime": "11:02",
+    "dogsIDs": ["4689812", "0154684", "5164"]
+  },
+  "arrivals": [
+    {
+      "musherNumber": "00015",
+      "arrivalDay": 1,
+      "scanningTime": "11:02",
+      "dogsIDs": ["4689812", "0154684", "5164"]
+    },
+    {
+      "musherNumber": "00016",
+      "arrivalDay": 1,
+      "scanningTime": "11:02",
+      "dogsIDs": ["4689812", "0154684", "5164"]
+    },
+    {
+      "musherNumber": "00017",
+      "arrivalDay": 1,
+      "scanningTime": "11:05",
+      "dogsIDs": ["4689812", "0154684", "5164"]
+    }
+  ]
 }

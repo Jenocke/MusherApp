@@ -1,10 +1,34 @@
+import { useEffect, useState } from "react";
 import "../css/arrivals.css";
+import { getArrivals } from "../utils/dataManager";
+import { handleImport } from "../utils/controllers";
 
 const ArrivalList = (props) => {
   return (
     <div className="arrivalList">
-      <p>Arrival list Leg {props.leg}</p>
-      <table></table>
+      <table>
+        <thead>
+          <tr>
+            <th colspan="3">Arrival list Leg {props.leg}</th>
+          </tr>
+          <tr>
+            <th>musher number</th>
+            <th>category</th>
+            <th>scanning time</th>
+          </tr>
+        </thead>
+        <tbody>
+          {props.data.map((element) => {
+            return (
+              <tr>
+                <th>{element.musherNumber}</th>
+                <th></th>
+                <th>{element.scanningTime}</th>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
     </div>
   );
 };
@@ -22,12 +46,22 @@ const NoList = () => {
 };
 
 const ArrivalListPage = (props) => {
+  const [filteredData, setFilteredData] = useState([]);
+
+  useEffect(() => {
+    getArrivals(props.leg).then((data) => {
+      setFilteredData(data);
+    });
+  }, [props.leg]);
+
   return (
     <div className="arrivalListPage">
-      {!props.data && <NoList />}
-      {props.data && <ArrivalList leg={props.leg} />}
+      {filteredData.length === 0 && <NoList />}
+      {filteredData.length > 0 && (
+        <ArrivalList leg={props.leg} data={filteredData} />
+      )}
       <div className="buttonArea">
-        <button>Import arrival List</button>
+        <button onclick={handleImport}>Import arrival List</button>
       </div>
     </div>
   );

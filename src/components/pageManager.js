@@ -8,14 +8,8 @@ const PageManager = () => {
   return (
     <Routes>
       <Route path="/mushers" element={<MusherList />} />
-      <Route
-        path="/arrivalsLeg1"
-        element={<ArrivalListPage leg={1} data={true} />}
-      />
-      <Route
-        path="/arrivalsLeg2"
-        element={<ArrivalListPage leg={2} data={false} />}
-      />
+      <Route path="/arrivalsLeg1" element={<ArrivalListPage leg={1} />} />
+      <Route path="/arrivalsLeg2" element={<ArrivalListPage leg={2} />} />
       <Route path="/disparencies" element={<DisparenciesDetector />} />
     </Routes>
   );
