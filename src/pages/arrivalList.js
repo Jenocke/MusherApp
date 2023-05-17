@@ -9,7 +9,7 @@ const ArrivalList = (props) => {
       <table>
         <thead>
           <tr>
-            <th colspan="3">Arrival list Leg {props.leg}</th>
+            <th colSpan="3">Arrival list Leg {props.leg}</th>
           </tr>
           <tr>
             <th>musher number</th>
@@ -18,9 +18,9 @@ const ArrivalList = (props) => {
           </tr>
         </thead>
         <tbody>
-          {props.data.map((element) => {
+          {props.data.map((element, index) => {
             return (
-              <tr>
+              <tr key={index}>
                 <th>{element.musherNumber}</th>
                 <th></th>
                 <th>{element.scanningTime}</th>
@@ -61,7 +61,8 @@ const ArrivalListPage = (props) => {
         <ArrivalList leg={props.leg} data={filteredData} />
       )}
       <div className="buttonArea">
-        <input type="file" accept=".txt" />
+        <input type="file" accept=".txt" id="fileInput" />
+        <button onClick={handleImport}>Import arrival file</button>
       </div>
     </div>
   );
