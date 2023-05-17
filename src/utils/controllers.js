@@ -1,3 +1,5 @@
+const _importFileCallback = () => {};
+
 const processTextFile = (fileContent) => {
   const staffWatchIds = ["001", "002", "003"];
   const leg1Day = "11";
@@ -55,7 +57,6 @@ const processTextFile = (fileContent) => {
 
     i++;
   }
-  return musherList;
 };
 
 const handleImport = () => {
@@ -64,9 +65,11 @@ const handleImport = () => {
   if (!fileToImport) return;
   const reader = new FileReader();
   reader.onload = (e) => {
-    processTextFile(e.target.result);
+    processTextFile(e.target.result, _importFileCallback);
   };
-  const fileContent = reader.readAsText(fileToImport);
+  reader.readAsText(fileToImport);
 };
+
+const handleComparison = () => {};
 
 export { handleImport };

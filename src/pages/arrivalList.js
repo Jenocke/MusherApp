@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "../css/arrivals.css";
-import { getArrivals } from "../utils/dataManager";
+import { getLegArrivals } from "../utils/dataManager";
 import { handleImport } from "../utils/controllers";
 
 const ArrivalList = (props) => {
@@ -49,7 +49,7 @@ const ArrivalListPage = (props) => {
   const [filteredData, setFilteredData] = useState([]);
 
   useEffect(() => {
-    getArrivals(props.leg).then((data) => {
+    getLegArrivals(props.leg).then((data) => {
       setFilteredData(data);
     });
   }, [props.leg]);
