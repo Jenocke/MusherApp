@@ -18,6 +18,7 @@ const processTextFile = (fileContent) => {
   //main loop. Loop through the whole file. We exit when we reach the "End" part or when we reach the end of the file
   let i = 0;
   const musherList = [];
+  let currentMusherIndex = 0;
   while (i < linesArray.length && !linesArray[i].startsWith("End")) {
     const lineSegments = linesArray[i].split(" ");
     //checking that it's a watch
@@ -43,13 +44,18 @@ const processTextFile = (fileContent) => {
 
         //subloop. that loop goes through an arrival until the staff's watch is scanned
       } else {
-        //if it's a staff's watch, we need to add the musher object to the list, and reset it
-        console.log(musherList);
+        //if it's a staff's watch, we increase the currentMusherIndex for the next one. If there's no next one, this index will just not be used
+        currentMusherIndex++;
       }
+    } else {
+      //it's not a watch, it's not end => should be a dog
+      //we add the id segment to the dogs list
+      musherList[currentMusherIndex].dogsIDs.push(lineSegments[0]);
     }
 
     i++;
   }
+  return musherList;
 };
 
 const handleImport = () => {
