@@ -49,3 +49,11 @@
   width: 100%;
   border: 1px black solid;
 }
+
+.empty {
+  visibility: hidden;
+}
+
+.musherId {
+  background-color: orangered;
+}

@@ -10,7 +10,10 @@ const PageManager = () => {
       <Route path="/mushers" element={<MusherList />} />
       <Route path="/arrivalsLeg1" element={<ArrivalListPage leg={1} />} />
       <Route path="/arrivalsLeg2" element={<ArrivalListPage leg={2} />} />
-      <Route path="/disparencies" element={<DisparenciesDetector />} />
+      <Route
+        path="/disparencies"
+        element={<DisparenciesDetector reload={true} />}
+      />
     </Routes>
   );
 };

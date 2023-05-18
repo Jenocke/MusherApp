@@ -9,7 +9,7 @@ const ArrivalList = (props) => {
       <table>
         <thead>
           <tr>
-            <th colSpan="3">Arrival list Leg {props.leg}</th>
+            <th>Arrival list Leg {props.leg}</th>
           </tr>
           <tr>
             <th>musher number</th>
