@@ -10,7 +10,7 @@
       "musherNumber": "114",
       "arrivalDay": 1,
       "scanningTime": "09:55",
-      "dogsIDs": ["250268600106699", "947000000584032"]
+      "dogsIDs": ["250268600106611", "947000000584032"]
     },
     {
       "musherNumber": "126",
@@ -31,40 +31,58 @@
       "dogsIDs": ["972273000156033", "972273000156156", "972273000155856"]
     },
     {
+      "musherNumber": "139",
+      "arrivalDay": 1,
+      "scanningTime": "12:11",
+      "dogsIDs": ["972273000983650", "972278772156156", "972271320155856"]
+    },
+    {
+      "musherNumber": "140",
+      "arrivalDay": 1,
+      "scanningTime": "13:31",
+      "dogsIDs": ["972273000156156", "972273000155856"]
+    },
+    {
       "musherNumber": "149",
       "arrivalDay": 1,
-      "scanningTime": "15:14",
+      "scanningTime": "13:32",
       "dogsIDs": ["528140000475624"]
     },
     {
       "musherNumber": "114",
       "arrivalDay": 2,
-      "scanningTime": "09:55",
-      "dogsIDs": ["250268600106699", "947000000584032"]
+      "scanningTime": "08:52",
+      "dogsIDs": ["250268600106699"]
     },
     {
       "musherNumber": "126",
       "arrivalDay": 2,
-      "scanningTime": "10:53",
+      "scanningTime": "09:48",
       "dogsIDs": ["981100004619683"]
     },
     {
       "musherNumber": "124",
       "arrivalDay": 2,
-      "scanningTime": "10:53",
+      "scanningTime": "09:55",
       "dogsIDs": ["967000009878577"]
     },
     {
       "musherNumber": "138",
       "arrivalDay": 2,
-      "scanningTime": "11:37",
+      "scanningTime": "10:00",
       "dogsIDs": ["972273000156032", "972273000156156", "972273000155856"]
     },
     {
-      "musherNumber": "149",
+      "musherNumber": "139",
       "arrivalDay": 2,
-      "scanningTime": "15:14",
-      "dogsIDs": ["528140000475624"]
+      "scanningTime": "10:32",
+      "dogsIDs": ["972273000983650", "972278772156156", "972271320155856"]
+    },
+    {
+      "musherNumber": "140",
+      "arrivalDay": 2,
+      "scanningTime": "10:45",
+      "dogsIDs": ["972273000156032", "972273000156156", "972273000155856"]
     }
   ]
 }
