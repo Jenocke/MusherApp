@@ -1,20 +1,11 @@
 const _importFileCallback = () => {};
 
+const handleImportComparison = (importedMushers) => {};
+
 const processTextFile = (fileContent) => {
   const staffWatchIds = ["001", "002", "003"];
   const leg1Day = "11";
   const leg2Day = "12";
-  //TODO
-  /* slice the text by lines
-      process each line
-          slice the line in segments
-          check the first segment's data
-            if it's starting by 0056 => new musher
-              start new object
-              process next lines until another 056 => close musher
-          return the object
-    return an array of objects
-   */
   const linesArray = fileContent.split("\r\n");
 
   //main loop. Loop through the whole file. We exit when we reach the "End" part or when we reach the end of the file
@@ -43,8 +34,6 @@ const processTextFile = (fileContent) => {
 
         musher.dogsIDs = [];
         musherList.push(musher);
-
-        //subloop. that loop goes through an arrival until the staff's watch is scanned
       } else {
         //if it's a staff's watch, we increase the currentMusherIndex for the next one. If there's no next one, this index will just not be used
         currentMusherIndex++;
@@ -57,6 +46,7 @@ const processTextFile = (fileContent) => {
 
     i++;
   }
+  handleImportComparison(musherList);
 };
 
 const handleImport = () => {
@@ -69,7 +59,5 @@ const handleImport = () => {
   };
   reader.readAsText(fileToImport);
 };
-
-const handleComparison = () => {};
 
 export { handleImport };

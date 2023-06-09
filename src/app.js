@@ -11,7 +11,9 @@ function App() {
       <main>
         <PageManager />
       </main>
-      <footer></footer>
+      <footer>
+        <p>Made by Kévin Goffin (Jenocke)</p>
+      </footer>
     </>
   );
 }
