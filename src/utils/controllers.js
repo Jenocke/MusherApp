@@ -1,6 +1,10 @@
 const _importFileCallback = () => {};
 
-const handleImportComparison = (importedMushers) => {};
+const handleImportComparison = (importedMushers) => {
+  //First we slice the imported mushers in two arrays. Leg1 and Leg2
+  //then we retrieve the arrays for leg1 and Leg2 that are already in the database
+  //Then we call the function to compare
+};
 
 const processTextFile = (fileContent) => {
   const staffWatchIds = ["001", "002", "003"];
@@ -18,7 +22,7 @@ const processTextFile = (fileContent) => {
     const isAWatch = lineSegments[0].startsWith("056");
     if (isAWatch) {
       const watchId = lineSegments[0].slice(lineSegments[0].length - 3);
-      //checking if it's a staff's watch, to be sure
+      //checking if it's the watch type (musher or staff)
       const isStaffWatch = staffWatchIds.includes(watchId);
       if (!isStaffWatch) {
         const musher = {};
