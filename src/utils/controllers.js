@@ -8,6 +8,7 @@ const compareLists = (databaseList, importedList) => {
     if (!updatedList.find((item) => item.musherNumber === element.musherNumber))
       updatedList.push(element);
   });
+  return updatedList;
 };
 
 const handleImportComparison = async (importedMushers) => {
