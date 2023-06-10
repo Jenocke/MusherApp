@@ -20,9 +20,7 @@ const getArrivals = async () => {
 
 const compareArrivals = async (data) => {
   const dataLeg1 = await getLegArrivals(1);
-  console.log(dataLeg1);
   const dataLeg2 = await getLegArrivals(2);
-  console.log(dataLeg2);
   const faultyDataSet = [];
 
   //passing through each leg 2 arrival to compare with leg 1 arrival

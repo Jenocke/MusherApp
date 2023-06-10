@@ -1,9 +1,29 @@
+import { getLegArrivals } from "./dataManager";
+
 const _importFileCallback = () => {};
 
-const handleImportComparison = (importedMushers) => {
+const compareLists = (databaseList, importedList) => {
+  const updatedList = JSON.parse(JSON.stringify(databaseList));
+  importedList.forEach((element) => {
+    if (!updatedList.find((item) => item.musherNumber === element.musherNumber))
+      updatedList.push(element);
+  });
+};
+
+const handleImportComparison = async (importedMushers) => {
   //First we slice the imported mushers in two arrays. Leg1 and Leg2
+  const importedMushersLeg1 = importedMushers.filter(
+    (element) => element.arrivalDay === 1
+  );
+  const importedMushersLeg2 = importedMushers.filter(
+    (element) => element.arrivalDay === 2
+  );
   //then we retrieve the arrays for leg1 and Leg2 that are already in the database
+  const Leg1List = await getLegArrivals(1);
+  const Leg2List = await getLegArrivals(2);
   //Then we call the function to compare
+  const updatedListLeg1 = compareLists(Leg1List, importedMushersLeg1);
+  const updatedListLeg2 = compareLists(Leg2List, importedMushersLeg2);
 };
 
 const processTextFile = (fileContent) => {
