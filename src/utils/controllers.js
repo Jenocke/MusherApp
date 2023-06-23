@@ -1,6 +1,5 @@
 import { getLegArrivals } from "./dataManager";
-
-const _importFileCallback = () => {};
+import { handleSaveToPC } from "./fileManager";
 
 const compareLists = (databaseList, importedList) => {
   const updatedList = JSON.parse(JSON.stringify(databaseList));
@@ -25,6 +24,14 @@ const handleImportComparison = async (importedMushers) => {
   //Then we call the function to compare
   const updatedListLeg1 = compareLists(Leg1List, importedMushersLeg1);
   const updatedListLeg2 = compareLists(Leg2List, importedMushersLeg2);
+  Leg1List.length = 0;
+  Leg2List.length = 0;
+  Leg1List.push(...updatedListLeg1);
+  Leg2List.push(...updatedListLeg2);
+  console.log(Leg1List);
+  const updatedArrivalList = updatedListLeg1;
+  updatedArrivalList.push(...updatedListLeg2);
+  handleSaveToPC(updatedArrivalList);
 };
 
 const processTextFile = (fileContent) => {
@@ -74,15 +81,4 @@ const processTextFile = (fileContent) => {
   handleImportComparison(musherList);
 };
 
-const handleImport = () => {
-  const inputElement = document.getElementById("fileInput");
-  const fileToImport = inputElement.files[0];
-  if (!fileToImport) return;
-  const reader = new FileReader();
-  reader.onload = (e) => {
-    processTextFile(e.target.result, _importFileCallback);
-  };
-  reader.readAsText(fileToImport);
-};
-
-export { handleImport };
+export { processTextFile };

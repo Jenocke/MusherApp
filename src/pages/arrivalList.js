@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "../css/arrivals.css";
 import { getLegArrivals } from "../utils/dataManager";
-import { handleImport } from "../utils/controllers";
+import { handleImport, handleSaveToPC } from "../utils/fileManager";
 
 const ArrivalList = (props) => {
   return (
