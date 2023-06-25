@@ -28,7 +28,6 @@ const handleImportComparison = async (importedMushers) => {
   Leg2List.length = 0;
   Leg1List.push(...updatedListLeg1);
   Leg2List.push(...updatedListLeg2);
-  console.log(Leg1List);
   const updatedArrivalList = updatedListLeg1;
   updatedArrivalList.push(...updatedListLeg2);
   handleSaveToPC(updatedArrivalList);
