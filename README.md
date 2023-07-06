@@ -19,6 +19,13 @@ Then it process those data to create the arrival list of each leg.
 With those processed lists, the app is able to compare them and display any discrepancie between them, helping the staff to spot any musher that may
 have broken the rules
 
+# Screenshots
+Arrival list
+![arrivals](https://github.com/Jenocke/MusherApp/assets/16962591/8d71c7e7-bfb3-4c7e-bcad-fa7d015a9d97)
+
+Disparencies
+![disparencies](https://github.com/Jenocke/MusherApp/assets/16962591/c5ae0e24-636d-4f83-ac9b-ce50c84fb3a3)
+
 # Command lines cheatsheet
 
 start server : npx json-server --watch database.json -p 4000
