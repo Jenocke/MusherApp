@@ -1,6 +1,7 @@
 # MusherApp
 
-software for musher race management
+Software for musher race management made in javascript.
+This app tracks the sled dog team organization of differents teams during a sled dog race.
 
 # Situation
 
